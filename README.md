@@ -5,51 +5,63 @@ Taller 4 de Programacion Orientada a Objetos.
 ---
 
 ## Autor
-Nombre: Robert Chirino Miranda  
-RUT: 21.370.498-2
-Carrera: Ingenieria Civil en Computacion e Informatica
+robertchirino
+21.370.498-2
 
 ---
 
 ## Descripcion
 
-El sistema permite la gestion de estudiantes, cursos y certificaciones, utilizando Programacion Orientada a Objetos y una arquitectura en capas.
+Aplicacion desarrollada en Java que permite la gestion academica de estudiantes, cursos y lineas de certificacion.  
+El sistema cuenta con autenticacion por rol (Administrador, Coordinador y Estudiante), persistencia en archivos de texto y validaciones academicas.
 
 ---
 
-## Arquitectura
+## Estructura del proyecto
 
-El proyecto esta dividido en tres capas:
+### Paquete Dominio
 
-- **Dominio:** clases del modelo del sistema.
-- **Logica:** gestion de datos y reglas del negocio.
-- **GUI:** interfaz grafica.
+Contiene las clases del modelo:
+- Usuario
+- Administrador
+- Coordinador
+- Estudiante
+- Curso
+- Nota
+- RegistroCertificacion
+- Certificacion
+- CertificacionTecnica
+- CertificacionAvanzada
+- AsignaturaCertificacion
+- VisitanteCertificacion
+
+### Paquete logica
+
+Contiene la logica del sistema:
+- GestorDatos
+- FabricaUsuario
+- EstrategiaCalculoPromedio
+- EstrategiaPromedioGeneral
+- EstrategiaPromedioPorSemestre
+
+### Paquete GUI
+
+Contiene la interfaz grafica:
+- Main
+- VentanaInicioSesion
+- VentanaAdministrador
+- VentanaCoordinador
+- VentanaEstudiante
+- VentanaFxIntegrada
 
 ---
 
-## Tecnologias
+## Patrones de diseño implementados
 
-- Java JDK 23
-- Eclipse
-- Swing
-- AWT
-- JavaFX (integrado)
-
----
-
-## Patrones de Diseño
-
-- Singleton
-- Factory
-- Strategy
-- Visitor
-
----
-
-## Interfaz Grafica
-
-La aplicacion esta desarrollada principalmente en Swing.  
-Se incluye una ventana JavaFX integrada mediante JFXPanel.
+- **Singleton:** GestorDatos
+- **Factory:** FabricaUsuario
+- **Strategy:** calculo de promedios
+- **Visitor:** operaciones segun tipo de certificacion
 
 ---
 
@@ -69,11 +81,10 @@ Estos archivos deben estar en la raiz del proyecto.
 
 ---
 
-## Ejecucion
+## Instrucciones de ejecucion
 
-1. Clonar el repositorio
-2. Importar
-3. Ejecutar la clase `Main`
-
----
-
+1. Clonar el repositorio desde GitHub.
+2. Importar el proyecto en Eclipse como **Existing Java Project**.
+3. Verificar que el proyecto use **JDK 23**.
+4. Verificar que los archivos `.txt` esten en la raiz del proyecto.
+5. Ejecutar la clase **Main**.

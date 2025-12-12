@@ -7,7 +7,6 @@ Taller 4 de Programacion Orientada a Objetos.
 ## Autor
 Nombre: Robert Chirino Miranda  
 RUT: 21.370.498-2
-
 Carrera: Ingenieria Civil en Computacion e Informatica
 
 ---
